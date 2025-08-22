@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <%- include('partials/head') %>
+  <body>
+    <%- include('partials/header') %>
+    <main class="container report">
+      <section class="report-header">
+        <h2>Audit Report — <%= scan.url %></h2>
+        <p>Scanned at: <%= new Date(scan.created_at).toLocaleString() %></p>
+        <div class="score-cards">
+          <div class="card">Security<br><strong><%= scan.score_security %></strong></div>
+          <div class="card">Performance<br><strong><%= scan.score_performance %></strong></div>
+          <div class="card">SEO<br><strong><%= scan.score_seo %></strong></div>
+          <div class="card">Accessibility<br><strong><%= scan.score_a11y %></strong></div>
+          <div class="card overall">Overall<br><strong><%= scan.overall_score %></strong></div>
+        </div>
+        <p><a href="/download/<%= scan.id %>" class="btn">Download PDF</a></p>
+      </section>
+
+      <section class="issues">
+        <h3>Issues & Recommendations</h3>
+        <% if (issues && issues.length) { %>
+          <table>
+            <thead><tr><th>Category</th><th>Severity</th><th>Issue</th><th>Recommendation</th></tr></thead>
+            <tbody>
+              <% issues.forEach(i => { %>
+                <tr>
+                  <td><%= i.category %></td>
+                  <td><%= i.severity %></td>
+                  <td><%= i.message %></td>
+                  <td><%= i.recommendation %></td>
+                </tr>
+              <% }) %>
+            </tbody>
+          </table>
+        <% } else { %>
+          <p>No issues recorded for this scan.</p>
+        <% } %>
+      </section>
+    </main>
+    <%- include('./partials/footer') %>
+  </body>
+</html>

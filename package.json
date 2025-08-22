@@ -1,0 +1,28 @@
+{
+  "name": "site-pulse",
+  "version": "1.0.0",
+  "description": "Site Pulse - website audit tool (security, performance, SEO, accessibility)",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "axe-core": "^4.9.4",
+    "axios": "^1.6.8",
+    "cheerio": "^1.0.0-rc.12",
+    "ejs": "^3.1.9",
+    "express": "^4.19.2",
+    "helmet": "^7.1.0",
+    "mysql2": "^3.9.4",
+    "puppeteer": "^22.10.0",
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}

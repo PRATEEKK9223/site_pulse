@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <%- include('partials/head') %>
+  <body>
+    <%- include('partials/header') %>
+    <main class="container">
+      <section class="hero">
+        <h2>Enter a website URL to run a Site Pulse audit</h2>
+        <form action="/scan" method="post" id="scanForm">
+          <input name="url" type="text" placeholder="https://example.com" required id="urlInput" />
+          <button type="submit" id="btn">Run Audit</button>
+        </form>
+      </section>
+
+      <section class="recent">
+        <h3>Recent scans</h3>
+        <% if (scans && scans.length) { %>
+          <table>
+            <thead><tr><th>ID</th><th>URL</th><th>Status</th><th>Overall</th><th>When</th><th>Action</th></tr></thead>
+            <tbody>
+              <% scans.forEach(s => { %>
+                <tr>
+                  <td><%= s.id %></td>
+                  <td title="<%= s.url %>"><%= s.url.length>60 ? s.url.slice(0,57)+'...' : s.url %></td>
+                  <td><%= s.status %></td>
+                  <td><%= s.overall_score || '-' %></td>
+                  <td><%= new Date(s.created_at).toLocaleString() %></td>
+                  <td><a href="/report/<%= s.id %>" id="view">View</a></td>
+                </tr>
+              <% }) %>
+            </tbody>
+          </table>
+        <% } else { %>
+          <p>No scans yet — run your first audit!</p>
+        <% } %>
+      </section>
+    </main>
+
+    <%- include('./partials/footer') %>
+
+    <script src="/js/main.js"></script>
+  </body>
+</html>

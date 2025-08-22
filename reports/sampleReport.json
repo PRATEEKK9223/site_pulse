@@ -1,0 +1,22 @@
+{
+  "scan": {
+    "id": 1,
+    "url": "https://example.com",
+    "status": "done",
+    "score_security": 88,
+    "score_performance": 72,
+    "score_seo": 82,
+    "score_a11y": 80,
+    "overall_score": 80,
+    "created_at": "2025-08-21T12:00:00Z"
+  },
+  "issues": [
+    {
+      "category": "security",
+      "severity": "high",
+      "code": "SEC_MISSING_CSP",
+      "message": "Header \"content-security-policy\" is missing",
+      "recommendation": "Add Content-Security-Policy header to restrict allowed sources for scripts/styles."
+    }
+  ]
+}

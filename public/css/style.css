@@ -1,0 +1,190 @@
+:root{
+  --accent: #90EE90;
+  --muted:#FFFACD;
+  --bg: #1B1F3B;      
+  --card:#2C2F5E;
+}
+body{
+  font-family:Inter, system-ui, Arial, sans-serif;
+  background:var(--bg);
+  margin:0;
+  color:#ffffff;
+}
+.container{
+  max-width:980px;
+  margin:24px auto;
+  padding:16px
+}
+.site-header{
+  background:var(--card);
+  padding:16px;
+  border-bottom:1px solid #e6eef8
+}
+.logo a{
+  color:var(--accent);
+  text-decoration:none;
+  font-weight:700;
+  font-size:40px
+}
+
+
+.tagline{
+  color:var(--muted);
+  margin-top:6px
+}
+.hero{
+  background:var(--card);
+  padding:20px;
+  border-radius:8px;
+  box-shadow:0 4px 12px rgba(16,24,40,0.04);
+  margin-bottom:16px
+}
+.hero form
+{
+  display:flex;
+  gap:8px
+}
+.hero input{
+  flex:1;
+  padding:10px;
+  border:1px solid #dbe7ff;
+  border-radius:6px;
+  outline: none;
+  font-size: 18px;
+}
+.hero button{
+  padding:10px 14px;
+  background:var(--accent);
+  color:#fff;
+  border:none;
+  border-radius:6px;
+  cursor:pointer
+}
+.recent table{
+  width:100%;
+  border-collapse:collapse;
+  background:var(--card);
+  border-radius:8px;
+  overflow:hidden
+}
+.recent th, .recent td{
+  padding:10px;
+  border-bottom:1px solid #f1f5f9;
+  text-align:left
+}
+.score-cards{display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top:10px
+}
+.card{
+  background:var(--card);
+  padding:12px;
+  border-radius:6px;
+  min-width:110px;
+  text-align:center;
+  box-shadow:0 2px 8px rgba(2,6,23,0.04)
+}
+.card.overall{
+  border:2px solid var(--accent)
+}
+.btn{
+  background:var(--accent);
+  color:#fff;
+  padding:8px 12px;
+  border-radius:6px;
+  text-decoration:none
+}
+.report .issues table{
+  width:100%;
+  border-collapse:collapse;
+  margin-top:12px
+}
+.report th, .report td{
+  padding:10px;
+  border-bottom:1px solid #eee;
+  text-align:left
+}
+
+
+#view{
+  text-decoration: none;
+  color:#fff;
+}
+
+#btn{
+  background-color: orangered;
+  font-size:18px;
+}
+
+.btn{
+  background-color: orangered;
+}
+
+
+
+
+.site-footer {
+  background-color: #2C2F5E; /* same as your card border for consistency */
+  color: #F0F0F0; /* light font color */
+  padding: 40px 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+}
+
+
+.footer-left, .footer-center, .footer-right {
+  /* flex: 1 1 250px;
+  margin: 10px; */
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+
+}
+
+.footer-center ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-center ul li {
+  margin: 8px 0;
+}
+
+.footer-center ul li a {
+  color: #F0F0F0;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-center ul li a:hover {
+  color: #00FF7F; /* light green highlight */
+}
+
+.social-icons a {
+  color: #F0F0F0;
+  margin-right: 15px;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #00FF7F; /* light green hover */
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 20px;
+  font-size: 14px;
+}

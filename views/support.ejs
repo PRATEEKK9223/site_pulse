@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('partials/head') %>
+  <body>
+    <%- include('partials/header') %>
+
+    <main class="container support">
+      <section class="support-content">
+        <h2>Support / Help Desk</h2>
+        <p>If you need assistance, please contact our support team using the information below or submit a request through our form.</p>
+
+        <h3>Contact Information</h3>
+        <ul>
+          <li>Email: <a href="mailto:support@sitepulse.com">support@sitepulse.com</a></li>
+          <li>Phone: +91-123-456-7890</li>
+          <li>Working Hours: Monday – Friday, 9:00 AM – 6:00 PM</li>
+        </ul>
+
+        <h3>Submit a Support Request</h3>
+        <form action="/support-request" method="post">
+          <label for="name">Your Name:</label> <br>
+          <input type="text" id="name" name="name" placeholder="Enter your name" required style="width:250px; height:30px; outline: none;"><br><br>
+
+          <label for="email">Your Email:</label> <br>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required style="width:250px; height:30px; outline: none;"><br><br>
+
+          <label for="message">Message:</label> <br>
+          <textarea id="message" name="message" rows="5" placeholder="Describe your issue" required style="width:250px; height:60px; outline: none;"></textarea><br><br>
+
+          <button type="submit" style="width:200px; height:40px; background-color: orangered; border: none; color:white;">Submit Request</button>
+        </form>
+      </section>
+    </main>
+
+    <%- include('partials/footer') %>
+  </body>
+</html>

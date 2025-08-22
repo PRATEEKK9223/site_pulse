@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('partials/head') %>
+<body>
+  <%- include('partials/header') %>
+
+  <main class="container about-page">
+    
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1>About Site Pulse</h1>
+      <p>Site Pulse helps you audit websites for performance, security, SEO, and accessibility with ease. Run audits, view reports, and improve your website efficiently.</p>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+      <h2>Our Features</h2>
+      <div class="feature-cards">
+        <div class="card">
+          <i class="fa-solid fa-shield-halved fa-2x"></i>
+          <h3>Security Audit</h3>
+          <p>Analyze your website for potential vulnerabilities and security issues to keep your site safe.</p>
+        </div>
+        <div class="card">
+          <i class="fa-solid fa-tachometer-alt fa-2x"></i>
+          <h3>Performance</h3>
+          <p>Measure page load speed, responsiveness, and optimization to improve user experience.</p>
+        </div>
+        <div class="card">
+          <i class="fa-solid fa-search fa-2x"></i>
+          <h3>SEO Analysis</h3>
+          <p>Get insights on SEO improvements to help your website rank better on search engines.</p>
+        </div>
+        <div class="card">
+          <i class="fa-solid fa-universal-access fa-2x"></i>
+          <h3>Accessibility</h3>
+          <p>Check accessibility compliance so your website can be used by everyone, including people with disabilities.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact / CTA Section -->
+    <section class="contact-cta">
+      <h2>Start Your First Audit</h2>
+      <p>Enter a URL on the <a href="/">home page</a> and see your website’s report instantly!</p>
+      <a href="/" class="btn">Run Audit</a>
+    </section>
+
+  </main>
+
+  <%- include('./partials/footer') %>
+
+</body>
+</html>

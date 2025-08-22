@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('partials/head') %>
+<body>
+  <%- include('partials/header') %>
+
+  <main class="container contact-page">
+    
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1>Contact Us</h1>
+      <p>Have questions or feedback? Reach out to the Site Pulse team and we’ll get back to you promptly.</p>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form-section">
+      <h2>Send a Message</h2>
+      <form action="/contact" method="post" id="contactForm" style="display: flex; flex-direction: column; gap:10px;">
+        <div class="form-group">
+          <label for="name">Name :</label>
+          <input type="text" id="name" name="name" placeholder="Your Name" required style="outline: none; width:250px; height:30px;" >
+        </div>
+        <div class="form-group">
+          <label for="email">Email :</label>
+          <input type="email" id="email" name="email" placeholder="Your Email" required style="outline: none;  width:250px; height:30px;">
+        </div>
+        <div class="form-group" style="display: flex ;">
+          <label for="message">Message :</label>
+          <textarea id="message" name="message" placeholder="Your Message"  style="outline: none; width:250px; height:60px;"></textarea>
+        </div>
+        <button type="submit" class="btn" style="width:200px;">Send Message  :</button>
+      </form>
+    </section>
+
+    <!-- Contact Info Section -->
+    <section class="contact-info">
+      <h2>Our Office</h2>
+      <p><i class="fa-solid fa-location-dot"></i> Jnn College Navule, Shimogga, India</p>
+      <p><i class="fa-solid fa-envelope"></i> support@sitepulse.com</p>
+      <p><i class="fa-solid fa-phone"></i> +91 98765 43210</p>
+      <p>Follow us on social media:</p>
+      <div class="social-icons">
+        <a href="#"><i class="fa-brands fa-facebook fa-2x"></i></a>
+        <a href="https://x.com/prath1_k?t=_FKGsveNG-zWj8NaG9snGw&s=09"><i class="fa-brands fa-twitter fa-2x"></i></a>
+        <a href="https://www.linkedin.com/in/prateek-k-394ab1330?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fa-brands fa-linkedin fa-2x"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram fa-2x"></i></a>
+      </div>
+    </section>
+
+  </main>
+
+  <%- include('./partials/footer') %>
+</body>
+</html>
